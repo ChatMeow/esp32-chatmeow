@@ -1,0 +1,29 @@
+menu "Example Configuration"
+
+config WIFI_SSID
+    string "WiFi SSID"
+	default "myssid"
+	help
+		SSID (network name) for the example to connect to.
+
+config WIFI_PASSWORD
+    string "WiFi Password"
+	default "myssid"
+	help
+		WiFi password (WPA or WPA2) for the example to use.
+
+		Can be left blank if the network has no security set.
+
+config SERVER_UPLOAD_URI
+    string "Server URL to upload data"
+    default "http://192.168.8.5:8000/upload"
+    help
+        Server URL to upload data"
+
+config SERVER_OUTPUT_URI
+	string "Server FILE URL to play voice"
+	default "http://192.168.8.5:8000/static/out.wav"
+	help
+		Server file url to play voice
+
+endmenu
